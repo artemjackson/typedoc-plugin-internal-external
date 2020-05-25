@@ -1,5 +1,5 @@
 import { InternalExternalPlugin } from './typedoc-plugin-internal-external';
-export function load(PluginHost) {
+export default function load(PluginHost) {
   var app = PluginHost.owner;
   /**
    * used like so:
