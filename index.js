@@ -1,5 +1,5 @@
-import { InternalExternalPlugin } from './typedoc-plugin-internal-external';
-export default function load(PluginHost) {
+var plugin = require('./typedoc-plugin-internal-external');
+module.exports = function (PluginHost) {
   var app = PluginHost.owner;
   /**
    * used like so:
@@ -15,6 +15,5 @@ export default function load(PluginHost) {
    * -ia publicapi
    */
   app.options.addDeclaration({ name: 'internal-aliases', short: 'ia' });
-
-  app.converter.addComponent('internal-external', InternalExternalPlugin);
-}
+  app.converter.addComponent('internal-external', plugin.InternalExternalPlugin);
+};
