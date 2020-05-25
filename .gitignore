@@ -4,8 +4,11 @@
 *.iml
 
 # Built using tsc
+index.js
 typedoc-plugin-internal-external.js
 typedocVersion.js
+getRawComment.js
+typedocVersionCompatibility.js
 
 # Logs
 logs
